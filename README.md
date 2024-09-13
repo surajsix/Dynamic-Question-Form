@@ -5,8 +5,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+below command in your termunal with associated to your project path.
 
 ### `npm start`
+
+if project not run then check the you have node.js install in your pc
+
+### `npm --version`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
