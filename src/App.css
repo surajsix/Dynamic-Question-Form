@@ -1,38 +1,137 @@
+/* Main app container */
 .App {
   text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Buttons */
+button {
+  background-color: #4a90e2;
   color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #357abd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Inputs and selects */
+input[type="text"], select {
+  width: calc(100% - 42px); /* Adjust for delete button space */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Form container */
+.form-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-container button {
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+
+/* Questions */
+.question-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-left: 5px solid #4a90e2;
+  border-radius: 5px;
+  position: relative;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Align items in column direction */
+}
+
+/* Ensure spacing for delete button */
+.question-item-content {
+  display: flex; /* Flexbox layout */
+  align-items: center;
+}
+
+.question-item input[type="text"],
+.question-item select {
+  margin-right: 50px; /* Create space for the delete button */
+}
+
+/* Nested questions */
+.nested-questions {
+  margin-left: 20px;
+}
+
+.question-level-1 {
+  font-weight: bold;
+}
+
+.question-level-2 {
+  margin-left: 20px;
+}
+
+.question-level-3 {
+  margin-left: 40px;
+}
+
+/* Delete button */
+.delete-btn {
+  background-color: #ff5c5c;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.delete-btn:hover {
+  background-color: #d9534f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  input[type="text"], select {
+    width: calc(100% - 42px); /* Adjust for delete button space */
+    padding: 8px;
+  }
+
+  .delete-btn {
+    padding: 4px 8px;
+    font-size: 14px;
+    top: 10px;
+    right: 10px;
   }
 }
